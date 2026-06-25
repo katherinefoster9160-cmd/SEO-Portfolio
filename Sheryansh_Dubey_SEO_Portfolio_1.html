@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheryansh Dubey — SEO Executive</title>
+<meta name="description" content="Sheryansh Dubey is an SEO Executive with hands-on experience in keyword research, on-page optimization, and performance reporting using Google Search Console and Google Analytics, based in Modinagar, Uttar Pradesh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #0F2C4C;
+    --navy-2: #16395E;
+    --ink: #1B2430;
+    --ink-soft: #56636F;
+    --ink-faint: #8A96A1;
+    --paper: #FBFAF7;
+    --panel: #FFFFFF;
+    --line: #E4E1D8;
+    --teal: #2E7D6B;
+    --teal-light: #E7F1EC;
+    --gold: #B8893E;
+    --gold-light: #F6EEE0;
+    --sans: 'Inter', sans-serif;
+    --serif: 'Fraunces', serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{ background:var(--teal-light); color:var(--teal); }
+  a{ color:inherit; }
+
+  .wrap{ max-width:980px; margin:0 auto; padding:0 32px; }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,250,247,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:980px; margin:0 auto; padding:20px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{ font-family:var(--serif); font-size:19px; font-weight:600; color:var(--navy); letter-spacing:0.01em; }
+  nav ul{ display:flex; gap:34px; list-style:none; }
+  nav a{ font-size:14px; color:var(--ink-soft); text-decoration:none; transition:color 0.15s; }
+  nav a:hover{ color:var(--navy); }
+  @media (max-width:680px){ nav ul{ display:none; } }
+
+  /* ---------- HERO ---------- */
+  .hero{ padding:96px 0 80px; }
+  .eyebrow{
+    font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:var(--teal);
+    font-weight:600; margin-bottom:22px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{ content:''; width:28px; height:1px; background:var(--teal); display:inline-block; }
+  .hero h1{
+    font-family:var(--serif); font-weight:500; letter-spacing:-0.01em;
+    font-size:clamp(38px, 5.4vw, 60px); line-height:1.08; color:var(--navy);
+    margin-bottom:26px; max-width:760px;
+  }
+  .hero h1 em{ font-style:italic; color:var(--teal); }
+  .hero p.lede{
+    font-size:18px; color:var(--ink-soft); max-width:560px; margin-bottom:38px;
+  }
+  .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
+  .btn{
+    font-size:14.5px; font-weight:500; padding:13px 26px; border-radius:3px;
+    text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+    transition: all 0.18s;
+  }
+  .btn-primary{ background:var(--navy); color:#fff; }
+  .btn-primary:hover{ background:var(--navy-2); transform:translateY(-1px); }
+  .btn-text{ color:var(--navy); border-bottom:1px solid var(--navy); padding:13px 0; }
+  .btn-text:hover{ color:var(--teal); border-color:var(--teal); }
+
+  /* ---------- HERO META ROW (location/contact) ---------- */
+  .meta-row{
+    display:flex; gap:36px; margin-top:64px; padding-top:28px; border-top:1px solid var(--line);
+    flex-wrap:wrap;
+  }
+  .meta-item{ font-size:13.5px; color:var(--ink-faint); }
+  .meta-item b{ display:block; font-size:14.5px; color:var(--ink); font-weight:500; margin-bottom:3px; }
+
+  /* ---------- SECTION SCAFFOLDING ---------- */
+  section{ padding:80px 0; border-top:1px solid var(--line); }
+  .sec-label{
+    font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-faint);
+    font-weight:600; margin-bottom:14px;
+  }
+  .sec-title{
+    font-family:var(--serif); font-size:clamp(26px,3vw,34px); font-weight:500; color:var(--navy);
+    margin-bottom:44px; max-width:600px;
+  }
+
+  /* ---------- ABOUT / SUMMARY ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:start; }
+  .about-grid p{ color:var(--ink-soft); font-size:16px; margin-bottom:16px; }
+  .about-grid p:last-child{ margin-bottom:0; }
+  .fact-list{ display:flex; flex-direction:column; gap:0; }
+  .fact{ padding:16px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:16px; }
+  .fact:first-child{ padding-top:0; }
+  .fact:last-child{ border-bottom:none; }
+  .fact-k{ font-size:13.5px; color:var(--ink-faint); }
+  .fact-v{ font-size:14.5px; color:var(--ink); font-weight:500; text-align:right; }
+  @media (max-width:760px){ .about-grid{ grid-template-columns:1fr; gap:36px; } }
+
+  /* ---------- SKILLS ---------- */
+  .skill-groups{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+  .skill-card{ background:var(--panel); padding:28px 26px; }
+  .skill-card .num{ font-family:var(--serif); font-size:22px; color:var(--teal); margin-bottom:14px; display:block; }
+  .skill-card h4{ font-size:15.5px; font-weight:600; margin-bottom:14px; color:var(--navy); }
+  .skill-card ul{ list-style:none; display:flex; flex-direction:column; gap:9px; }
+  .skill-card li{ font-size:14px; color:var(--ink-soft); padding-left:14px; position:relative; }
+  .skill-card li::before{ content:''; position:absolute; left:0; top:7px; width:5px; height:5px; border-radius:50%; background:var(--gold); }
+  @media (max-width:760px){ .skill-groups{ grid-template-columns:1fr; } }
+
+  /* ---------- EXPERIENCE ---------- */
+  .exp-item{ padding:36px 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:200px 1fr; gap:32px; }
+  .exp-item:first-child{ padding-top:0; }
+  .exp-item:last-child{ border-bottom:none; padding-bottom:0; }
+  .exp-when{ font-size:13.5px; color:var(--ink-faint); }
+  .exp-when .current{
+    display:inline-block; margin-top:8px; font-size:11px; font-weight:600; letter-spacing:0.04em;
+    text-transform:uppercase; color:var(--teal); background:var(--teal-light);
+    padding:4px 10px; border-radius:2px;
+  }
+  .exp-role{ font-size:19px; font-weight:600; color:var(--navy); margin-bottom:4px; }
+  .exp-org{ font-size:14px; color:var(--ink-faint); margin-bottom:16px; }
+  .exp-list{ list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .exp-list li{ font-size:15px; color:var(--ink-soft); padding-left:20px; position:relative; }
+  .exp-list li::before{ content:'—'; position:absolute; left:0; color:var(--gold); }
+  @media (max-width:680px){ .exp-item{ grid-template-columns:1fr; gap:8px; } }
+
+  /* ---------- LEARNING PATH (timeline-ish, growth motif) ---------- */
+  .growth-note{
+    background:var(--teal-light); border-radius:6px; padding:32px 36px; margin-bottom:48px;
+    display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center;
+  }
+  .growth-note p{ font-size:15.5px; color:var(--navy); max-width:560px; }
+  .growth-note strong{ font-weight:600; }
+  .growth-chip{
+    font-family:var(--serif); font-size:15px; color:var(--teal); background:#fff;
+    padding:10px 18px; border-radius:20px; white-space:nowrap; border:1px solid var(--line);
+  }
+  @media (max-width:680px){ .growth-note{ grid-template-columns:1fr; } }
+
+  .edu-item{ display:grid; grid-template-columns:200px 1fr; gap:32px; padding:28px 0; border-bottom:1px solid var(--line); }
+  .edu-item:first-child{ padding-top:0; }
+  .edu-item:last-child{ border-bottom:none; padding-bottom:0; }
+  .edu-when{ font-size:13.5px; color:var(--ink-faint); }
+  .edu-title{ font-size:17px; font-weight:600; color:var(--navy); margin-bottom:4px; }
+  .edu-org{ font-size:14px; color:var(--ink-faint); margin-bottom:10px; }
+  .edu-desc{ font-size:14.5px; color:var(--ink-soft); }
+  @media (max-width:680px){ .edu-item{ grid-template-columns:1fr; gap:6px; } }
+
+  /* ---------- CONTACT ---------- */
+  .contact-block{
+    background:var(--navy); border-radius:8px; padding:64px 56px; text-align:left;
+    display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:center;
+  }
+  .contact-block h2{ font-family:var(--serif); font-size:clamp(26px,3.4vw,36px); color:#fff; font-weight:500; margin-bottom:14px; }
+  .contact-block p{ color:#C7D2DD; font-size:15.5px; max-width:420px; }
+  .contact-cta{ display:flex; flex-direction:column; gap:14px; align-items:flex-start; }
+  .contact-cta a{ font-size:15px; }
+  .contact-block .btn-primary{ background:var(--gold); color:#2B1D08; }
+  .contact-block .btn-primary:hover{ background:#CB9A4E; }
+  .contact-block .email-link{ color:#fff; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.4); padding-bottom:2px; }
+  .contact-block .email-link:hover{ border-color:#fff; }
+  @media (max-width:680px){ .contact-block{ grid-template-columns:1fr; padding:48px 32px; } }
+
+  footer{ padding:36px 0 56px; text-align:center; font-size:13px; color:var(--ink-faint); }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="logo">Sheryansh Dubey</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" style="border-top:none;">
+    <div class="eyebrow">SEO Executive</div>
+    <h1>Bringing structure and<br>analysis to <em>search visibility.</em></h1>
+    <p class="lede">An SEO Executive with 6 months of hands-on experience in keyword research, on-page optimization, and performance reporting — backed by a technical foundation from a BCA and prior experience in technical troubleshooting and data reporting.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:sheryanshdubey300@gmail.com">Get in touch</a>
+      <a class="btn-text" href="#experience">View experience ↓</a>
+    </div>
+
+    <div class="meta-row reveal">
+      <div class="meta-item"><b>Modinagar, UP</b>Based in India</div>
+      <div class="meta-item"><b>+91 90279 46460</b>Available by phone</div>
+      <div class="meta-item"><b>sheryanshdubey300@gmail.com</b>Open to new opportunities</div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec-label">About</div>
+    <h2 class="sec-title">A hands-on, analytical approach to search visibility.</h2>
+    <div class="about-grid">
+      <div class="reveal">
+        <p>For the past 6 months I've worked remotely as an SEO Executive at Quisitive Businesses, where my day-to-day work covers keyword research, on-page optimization, and performance reporting using Google Search Console and Google Analytics. I focus on finding real keyword opportunities, optimizing titles and meta tags, and tracking what those changes actually do to traffic and rankings.</p>
+        <p>Before SEO, I worked in technical support and operations — time spent inside CRM systems, documenting recurring issues, and building Excel-based reports. That background gave me the analytical habits and reporting discipline I now apply directly to SEO: structured research, clear documentation, and tracking results over time rather than guessing.</p>
+      </div>
+      <div class="fact-list reveal">
+        <div class="fact"><span class="fact-k">Current role</span><span class="fact-v">SEO Executive, Quisitive (Remote)</span></div>
+        <div class="fact"><span class="fact-k">Education</span><span class="fact-v">BCA, CCS University</span></div>
+        <div class="fact"><span class="fact-k">SEO experience</span><span class="fact-v">6 months, hands-on</span></div>
+        <div class="fact"><span class="fact-k">Core tools</span><span class="fact-v">Search Console, Analytics</span></div>
+        <div class="fact"><span class="fact-k">Languages</span><span class="fact-v">Hindi, English</span></div>
+        <div class="fact"><span class="fact-k">Location</span><span class="fact-v">Modinagar, Uttar Pradesh</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-label">Capabilities</div>
+    <h2 class="sec-title">What I bring to an SEO role.</h2>
+    <div class="skill-groups reveal">
+      <div class="skill-card">
+        <span class="num">01</span>
+        <h4>SEO execution</h4>
+        <ul>
+          <li>Keyword research</li>
+          <li>On-page optimization (titles, meta tags)</li>
+          <li>Content optimization</li>
+          <li>Competitor &amp; market research</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <span class="num">02</span>
+        <h4>Tools &amp; reporting</h4>
+        <ul>
+          <li>Google Search Console</li>
+          <li>Google Analytics</li>
+          <li>MS Excel reporting &amp; analysis</li>
+          <li>Ranking &amp; traffic performance tracking</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <span class="num">03</span>
+        <h4>Working style</h4>
+        <ul>
+          <li>Analytical, detail-oriented thinking</li>
+          <li>Clear client &amp; team communication</li>
+          <li>Basic HTML &amp; website structure</li>
+          <li>Consistent, process-driven execution</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-label">Experience</div>
+    <h2 class="sec-title">Six months of hands-on SEO, backed by a longer reporting habit.</h2>
+
+    <div class="exp-item reveal">
+      <div class="exp-when">Jan 2026 — Present<br><span class="current">Current role</span></div>
+      <div>
+        <div class="exp-role">SEO Executive</div>
+        <div class="exp-org">Quisitive Businesses (Remote)</div>
+        <ul class="exp-list">
+          <li>Conduct keyword research to identify search opportunities and guide content and on-page decisions</li>
+          <li>Optimize on-page elements, including page titles, meta tags, and content, to improve search relevance</li>
+          <li>Monitor organic traffic, keyword rankings, and site performance using Google Search Console and Google Analytics</li>
+          <li>Compile regular performance reports highlighting ranking trends, traffic changes, and optimization opportunities</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-when">Mar 2025 — Dec 2025</div>
+      <div>
+        <div class="exp-role">Technical Support Executive</div>
+        <div class="exp-org">Client Support &amp; Service Coordination</div>
+        <ul class="exp-list">
+          <li>Researched and documented recurring technical issues, organizing findings into clear, structured reports</li>
+          <li>Tracked and analyzed support request data in the CRM system to identify patterns and improve response times</li>
+          <li>Maintained detailed documentation of processes and resolutions, supporting consistent service quality</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-when">Apr 2021 — Dec 2022</div>
+      <div>
+        <div class="exp-role">Sales &amp; Operations Coordinator</div>
+        <div class="exp-org">Daily Operations &amp; Vendor Communication</div>
+        <ul class="exp-list">
+          <li>Prepared Excel-based operational and performance reports for management review</li>
+          <li>Coordinated daily workflows and communication across sales, vendor, and customer touchpoints</li>
+          <li>Monitored data accuracy across reporting systems, developing close attention to trend tracking</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="sec-label">Education</div>
+    <h2 class="sec-title">A technical foundation behind the SEO work.</h2>
+
+    <div class="growth-note reveal">
+      <p><strong>6 months of applied SEO experience</strong> — keyword research, on-page optimization, and performance reporting with Google Search Console and Google Analytics — gained on the job at Quisitive Businesses.</p>
+      <span class="growth-chip">Jan 2026 – Present</span>
+    </div>
+
+    <div class="edu-item reveal">
+      <div class="edu-when">Aug 2022 — Jun 2025</div>
+      <div>
+        <div class="edu-title">Bachelor of Computer Applications (BCA)</div>
+        <div class="edu-org">CCS University</div>
+        <div class="edu-desc">Coursework in programming, networking fundamentals, and system analysis — providing a practical, working understanding of how websites and web technologies function under the hood.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-block reveal">
+      <div>
+        <h2>An SEO Executive who researches, optimizes, and reports on real results.</h2>
+        <p>Open to SEO, digital marketing, and content optimization opportunities — remote or based near Modinagar, Uttar Pradesh.</p>
+      </div>
+      <div class="contact-cta">
+        <a class="btn btn-primary" href="mailto:sheryanshdubey300@gmail.com">Email me →</a>
+        <a class="email-link" href="tel:+919027946460">+91 9027946460</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  Sheryansh Dubey · Modinagar, Uttar Pradesh, India
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
